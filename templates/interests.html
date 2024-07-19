@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор интересов</title>
+</head>
+<body>
+    <h1>Выберите интересы для каждого члена семьи</h1>
+    <form action="/result" method="post">
+        {% for i in range(family_count) %}
+            <h3>Член семьи {{ i + 1 }}</h3>
+            <label><input type="checkbox" name="interests[{{ i }}]" value="спорт"> Спорт</label><br>
+            <label><input type="checkbox" name="interests[{{ i }}]" value="творчество"> Творчество</label><br>
+            <label><input type="checkbox" name="interests[{{ i }}]" value="природа"> Природа</label><br>
+            <label><input type="checkbox" name="interests[{{ i }}]" value="игры"> Игры</label><br>
+            <label><input type="checkbox" name="interests[{{ i }}]" value="наука"> Наука</label><br>
+            <label><input type="checkbox" name="interests[{{ i }}]" value="культура"> Культура</label><br>
+        {% endfor %}
+        <button type="submit">Получить занятия</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты</title>
+</head>
+<body>
+    <h1>Выбранные занятия</h1>
+    {% if activities %}
+        <ul>
+            {% for activity in activities %}
+                <li>{{ activity }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет общих интересов для занятий.</p>
+    {% endif %}
+    <a href="/">Назад</a>
+</body>
+</html>
